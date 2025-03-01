@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cl357576hhwlm"]
 
-[ext_resource type="Script" uid="uid://ccia30atwndgv" path="res://addons/sharp_quiver_analytics/Analytics.cs" id="1_0l5pd"]
+[ext_resource type="Script" uid="uid://diyh5hflvc03m" path="res://addons/sharp_quiver_analytics/Analytics.cs" id="1_0l5pd"]
 
 [node name="Analytics" type="Node" node_paths=PackedStringArray("httpRequest", "retryTimer", "quitEventTimer")]
 script = ExtResource("1_0l5pd")

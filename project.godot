@@ -26,3 +26,8 @@ project/assembly_name="Quiver Analytics"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/sharp_quiver_analytics/plugin.cfg")
+
+[quiver]
+
+general/auth_token=""
+analytics/player_consent_required=true

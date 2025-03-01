@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d12k04516ets1"]
 
-[ext_resource type="Script" uid="uid://dqbejm5kfh4s0" path="res://addons/sharp_quiver_analytics/ConsentDialog.cs" id="1_7fwjp"]
+[ext_resource type="Script" uid="uid://bss4ors0te0hi" path="res://addons/sharp_quiver_analytics/ConsentDialog.cs" id="1_7fwjp"]
 
 [sub_resource type="Animation" id="Animation_m08b6"]
 resource_name = "RESET"
@@ -112,8 +112,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -199.0
-offset_bottom = 393.0
+offset_top = -127.0
+offset_bottom = 465.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -151,3 +151,6 @@ text = "Opt out"
 libraries = {
 &"": SubResource("AnimationLibrary_3qyvs")
 }
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/ApproveButton" to="." method="OnApproveButtonPressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/DenyButton" to="." method="OnDenyButtonPressed"]

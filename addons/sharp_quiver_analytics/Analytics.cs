@@ -133,7 +133,9 @@ public partial class Analytics : Node {
 
 	// Whether we should be obligated to show the consent dialog to the player
 	public static bool ShouldShowConsentDialog() {
-		return Instance.consentRequired && !Instance.consentRequested;
+		return Instance.consentRequired &&
+			!Instance.consentRequested &&
+			!Instance.consentGranted; // don't ask again if user has already given consent
 	}
 
 	// Show the consent dialog to the user, using the passed in node as the parent
