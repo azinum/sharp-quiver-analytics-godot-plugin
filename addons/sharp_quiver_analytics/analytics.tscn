@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl357576hhwlm"]
+
+[ext_resource type="Script" uid="uid://ccia30atwndgv" path="res://addons/sharp_quiver_analytics/Analytics.cs" id="1_0l5pd"]
+
+[node name="Analytics" type="Node" node_paths=PackedStringArray("httpRequest", "retryTimer", "quitEventTimer")]
+script = ExtResource("1_0l5pd")
+httpRequest = NodePath("HTTPRequest")
+retryTimer = NodePath("RetryTimer")
+quitEventTimer = NodePath("QuitEventTimer")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+timeout = 5.0
+
+[node name="RetryTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="QuitEventTimer" type="Timer" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_OnHttpRequestRequestCompleted"]
+[connection signal="timeout" from="RetryTimer" to="." method="_OnRetryTimerTimeout"]
+[connection signal="timeout" from="QuitEventTimer" to="." method="_OnQuitEventTimerTimeout"]

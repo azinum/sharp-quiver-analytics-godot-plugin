@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://8diwgd86ydiy"]
 
-[ext_resource type="Script" path="res://test.gd" id="1_42ifr"]
+[ext_resource type="Script" uid="uid://cqcqjp6adw7ph" path="res://Test.cs" id="1_37kl0"]
 
 [node name="Test" type="Node"]
-script = ExtResource("1_42ifr")
+script = ExtResource("1_37kl0")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -37,5 +37,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 44
 text = "Quit	"
 
-[connection signal="pressed" from="Panel/HBoxContainer/TestEventButton" to="." method="_on_test_event_button_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/QuitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/TestEventButton" to="." method="_OnTestEventButtonPressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/QuitButton" to="." method="_OnButtonPressed"]
